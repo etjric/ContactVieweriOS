@@ -111,6 +111,11 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+            let ctrl = EditViewController(nibName: "EditViewController", bundle: nil);
+            self.navigationController?.pushViewController(ctrl, animated: true)
+    }
 
 }
 
