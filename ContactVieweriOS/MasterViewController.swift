@@ -44,6 +44,11 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
+        
+        //on xcode 6.2 -- the as! is as here
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+
+        let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
     }
 
     override func didReceiveMemoryWarning() {
