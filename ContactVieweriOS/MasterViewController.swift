@@ -46,7 +46,7 @@ class MasterViewController: UITableViewController {
         }
         
         //on xcode 6.2 -- the as! is as here
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
 
         let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
     }
@@ -68,8 +68,8 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = contacts[indexPath.row] as! Contact
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let object = contacts[indexPath.row] as Contact
+                let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -88,9 +88,9 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = contacts[indexPath.row] as! Contact
+        let object = contacts[indexPath.row] as Contact
         cell.textLabel!.text = object.name
         
         cell.detailTextLabel!.text = "\(object.phone)   \(object.title)"

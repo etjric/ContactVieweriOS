@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DC40C364-150F-4DD5-9A23-06A0731F359B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ContactVieweriOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>80C483F389925CB76C3C5E6F73E699E70819F51D</key>
 		<string>https://github.com/etjric/ContactVieweriOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ContactVieweriOS.xcodeproj/project.xcworkspace</string>
+	<string>ContactVieweriOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>80C483F389925CB76C3C5E6F73E699E70819F51D</key>
