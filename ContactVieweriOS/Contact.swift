@@ -10,6 +10,7 @@ import Foundation
 
 class Contact: NSObject {
     
+    var id: String
     var name:String
     var phone:String
     var title:String
@@ -17,11 +18,13 @@ class Contact: NSObject {
     var twitterId:String
     
     init(name:String, phone:String, title:String, email:String, twitterId:String) {
+        self.id = ""
         self.name = name
         self.phone = phone
         self.title = title
         self.email = email
         self.twitterId = twitterId
     }
+    
     
 }

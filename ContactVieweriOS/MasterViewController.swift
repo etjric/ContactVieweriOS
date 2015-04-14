@@ -28,7 +28,7 @@ class MasterViewController: UITableViewController {
         contacts.append(contact1)
         contacts.append(contact2)
         contacts.append(contact3)
-        
+
     }
 
     override func viewDidLoad() {
@@ -42,11 +42,54 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
+
+        let file = "contacts.json"
+        
+        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+            let dir = dirs[0] //documents directory
+            let pathT = dir.stringByAppendingPathComponent(file);
+            let text = "some text"
+            
+            let data = NSJSONSerialization.dataWithJSONObject(contacts, options: nil, error: nil)
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            
+            //writing
+            dataString!.writeToFile(pathT, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
+            
+            //reading
+//            let newDataString = String(contentsOfFile: pathT, encoding: NSUTF8StringEncoding, error: nil)
+//            contacts =NSJSONSerialization.
+//            let myText: String? = newDataString
+//            
+        }
         
         //on xcode 6.2 -- the as! is as here
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+
+//        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+//        
+//        let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
+        //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+
+        let path = NSBundle.mainBundle().pathForResource("defaultData", ofType: "json")
+
+        if (contacts.count < 1) {
+            var jsonError: NSError?
+            let jsonData: NSData? = NSData.dataWithContentsOfMappedFile(path!) as? NSData
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions.MutableContainers, error:&jsonError) as NSDictionary
+           // var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as? NSDictionary
+            //var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &jsonError ) as NSDictionary
+            
+//            if jsonResult {
+//                // process jsonResult
+//            } else {
+//                // couldn't load JSON, look at error
+//            }
+//            
+            let x: Int = 1
+            
+        //contacts = jsonResult["contact"]
+        }
         
-        let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
     }
 
     override func didReceiveMemoryWarning() {

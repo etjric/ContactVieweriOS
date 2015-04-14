@@ -1,0 +1,25 @@
+{
+    "contact":[
+               {
+               "name": "Bob Marley",
+               "phone": "123-456-7890",
+               "title": "Chief Musician",
+               "email": "bobbym@mac.com",
+               "twitterId": "bobbym"
+               },
+               {
+               "name": "Cousin Vinny",
+               "phone": "098-765-4321",
+               "title": "Button Man I",
+               "email": "counsinv@corlene.com",
+               "twitterId": "problem_solver"
+               }
+               {
+               "name": "John Doe",
+               "phone": "decline",
+               "title": "Nameless Entity",
+               "email": "decline@decline.com",
+               "twitterId": "no"
+               }
+               ]
+}
