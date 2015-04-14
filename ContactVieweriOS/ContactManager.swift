@@ -57,6 +57,41 @@ class ContactManager: NSObject {
     func loadContacts() {
         //load the file
         //load _contacts from json
+        let file = "contacts.json"
+        
+        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+            let dir = dirs[0] //documents directory
+            let pathT = dir.stringByAppendingPathComponent(file);
+            let text = "some text"
+            
+            let data = NSJSONSerialization.dataWithJSONObject(_contacts, options: nil, error: nil)
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            
+            //writing
+            dataString!.writeToFile(pathT, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
+            
+            //reading
+            //            let newDataString = String(contentsOfFile: pathT, encoding: NSUTF8StringEncoding, error: nil)
+            //            contacts =NSJSONSerialization.
+            //            let myText: String? = newDataString
+            //            
+            
+//            if (_contacts.count < 1) {
+//                var jsonError: NSError?
+//                let jsonData: NSData? = NSData.dataWithContentsOfMappedFile(path!) as? NSData
+//                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions.MutableContainers, error:&jsonError) as NSDictionary
+//                // var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as? NSDictionary
+//                //var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &jsonError ) as NSDictionary
+//                
+//                //            if jsonResult {
+//                //                // process jsonResult
+//                //            } else {
+//                //                // couldn't load JSON, look at error
+//                //            }
+//                //            
+//
+        }
+
     }
     
     func getAllContacts() -> [Contact] {
