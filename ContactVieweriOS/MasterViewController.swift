@@ -45,6 +45,7 @@ class MasterViewController: UITableViewController {
         
         //on xcode 6.2 -- the as! is as here
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        
         let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
     }
 
