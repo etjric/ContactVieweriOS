@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E76A0BD1ADCA56C00C5C974 /* defaultData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E76A0BC1ADCA56C00C5C974 /* defaultData.json */; };
 		4E76A0BF1ADCB85400C5C974 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */; };
 		4E7A26E51AD9A7E0000C4046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E41AD9A7E0000C4046 /* AppDelegate.swift */; };
 		4E7A26E71AD9A7E0000C4046 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E61AD9A7E0000C4046 /* MasterViewController.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E76A0BC1ADCA56C00C5C974 /* defaultData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultData.json; sourceTree = "<group>"; };
 		4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		4E7A26DF1AD9A7E0000C4046 /* ContactVieweriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactVieweriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7A26E31AD9A7E0000C4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				4E7A26EF1AD9A7E1000C4046 /* LaunchScreen.xib */,
 				4E7A26E21AD9A7E0000C4046 /* Supporting Files */,
 				4E7A27061AD9A837000C4046 /* Contact.swift */,
-				4E76A0BC1ADCA56C00C5C974 /* defaultData.json */,
 				4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */,
 			);
 			path = ContactVieweriOS;
@@ -211,8 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6481121ADCB77900C91359 /* EditViewController.xib in Resources */,
-				4E76A0BD1ADCA56C00C5C974 /* defaultData.json in Resources */,
-				4E3B13BF1AD9BFD1006E417B /* EditViewController.xib in Resources */,
 				4E7A26EC1AD9A7E0000C4046 /* Main.storyboard in Resources */,
 				4E7A26F11AD9A7E1000C4046 /* LaunchScreen.xib in Resources */,
 				4E7A26EE1AD9A7E1000C4046 /* Images.xcassets in Resources */,
