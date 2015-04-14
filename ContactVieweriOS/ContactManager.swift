@@ -13,8 +13,18 @@ private let _ourInstance = ContactManager()
 class ContactManager: NSObject {
     var _contacts = [String: Contact]()
     private let _contactFileName = "contacts_storage.json"
-    class var Instance : ContactManager {
-        return _ourInstance
+    
+    class var sharedInstance : ContactManager {
+        struct Static {
+            static var instance: ContactManager?
+            static var token: dispatch_once_t = 0
+        }
+
+        dispatch_once(&Static.token) {
+            Static.instance = ContactManager()
+        }
+        
+        return Static.instance!
     }
     
     private override init() {
@@ -57,8 +67,10 @@ class ContactManager: NSObject {
     func loadContacts() {
         //load the file
         //load _contacts from json
+        generateTestData()
         let file = "contacts.json"
         
+        if (false) {
         if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
             let dir = dirs[0] //documents directory
             let pathT = dir.stringByAppendingPathComponent(file);
@@ -90,6 +102,7 @@ class ContactManager: NSObject {
 //                //            }
 //                //            
 //
+        }
         }
 
     }

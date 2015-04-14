@@ -12,7 +12,8 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var contacts = [Contact]()
-
+    
+    var ctxContactManager: ContactManager = ContactManager.sharedInstance
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,13 +22,8 @@ class MasterViewController: UITableViewController {
             self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
         }
         
-        let contact1 = Contact(name: "John", phone: "123-456-5671", title: "Consultant", email: "decline@go.com", twitterId: "tweeting")
-        let contact2 = Contact(name: "Fred", phone: "123-456-5672", title: "Consultant2", email: "decline@go.com2", twitterId: "tweeting2")
-        let contact3 = Contact(name: "George", phone: "123-456-5673", title: "Consultant3", email: "decline@go.com3", twitterId: "tweeting3")
-        
-        contacts.append(contact1)
-        contacts.append(contact2)
-        contacts.append(contact3)
+        ctxContactManager.loadContacts()
+        contacts = ctxContactManager.getAllContacts()
 
     }
 
