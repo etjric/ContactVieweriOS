@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E3B13BD1AD9BCDE006E417B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3B13BC1AD9BCDE006E417B /* EditViewController.swift */; };
-		4E3B13BF1AD9BFD1006E417B /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3B13BE1AD9BFD1006E417B /* EditViewController.xib */; };
 		4E7A26E51AD9A7E0000C4046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E41AD9A7E0000C4046 /* AppDelegate.swift */; };
 		4E7A26E71AD9A7E0000C4046 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E61AD9A7E0000C4046 /* MasterViewController.swift */; };
 		4E7A26E91AD9A7E0000C4046 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E81AD9A7E0000C4046 /* DetailViewController.swift */; };
@@ -17,6 +15,8 @@
 		4E7A26F11AD9A7E1000C4046 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7A26EF1AD9A7E1000C4046 /* LaunchScreen.xib */; };
 		4E7A26FD1AD9A7E1000C4046 /* ContactVieweriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26FC1AD9A7E1000C4046 /* ContactVieweriOSTests.swift */; };
 		4E7A27071AD9A837000C4046 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A27061AD9A837000C4046 /* Contact.swift */; };
+		5C6481111ADCB77900C91359 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64810F1ADCB77900C91359 /* EditViewController.swift */; };
+		5C6481121ADCB77900C91359 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6481101ADCB77900C91359 /* EditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E3B13BC1AD9BCDE006E417B /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		4E3B13BE1AD9BFD1006E417B /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		4E7A26DF1AD9A7E0000C4046 /* ContactVieweriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactVieweriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7A26E31AD9A7E0000C4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7A26E41AD9A7E0000C4046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		4E7A26FB1AD9A7E1000C4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7A26FC1AD9A7E1000C4046 /* ContactVieweriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVieweriOSTests.swift; sourceTree = "<group>"; };
 		4E7A27061AD9A837000C4046 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5C64810F1ADCB77900C91359 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		5C6481101ADCB77900C91359 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +89,12 @@
 				4E7A26E61AD9A7E0000C4046 /* MasterViewController.swift */,
 				4E7A26E81AD9A7E0000C4046 /* DetailViewController.swift */,
 				4E7A26EA1AD9A7E0000C4046 /* Main.storyboard */,
+				5C64810F1ADCB77900C91359 /* EditViewController.swift */,
+				5C6481101ADCB77900C91359 /* EditViewController.xib */,
 				4E7A26ED1AD9A7E1000C4046 /* Images.xcassets */,
 				4E7A26EF1AD9A7E1000C4046 /* LaunchScreen.xib */,
 				4E7A26E21AD9A7E0000C4046 /* Supporting Files */,
 				4E7A27061AD9A837000C4046 /* Contact.swift */,
-				4E3B13BC1AD9BCDE006E417B /* EditViewController.swift */,
-				4E3B13BE1AD9BFD1006E417B /* EditViewController.xib */,
 			);
 			path = ContactVieweriOS;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3B13BF1AD9BFD1006E417B /* EditViewController.xib in Resources */,
+				5C6481121ADCB77900C91359 /* EditViewController.xib in Resources */,
 				4E7A26EC1AD9A7E0000C4046 /* Main.storyboard in Resources */,
 				4E7A26F11AD9A7E1000C4046 /* LaunchScreen.xib in Resources */,
 				4E7A26EE1AD9A7E1000C4046 /* Images.xcassets in Resources */,
@@ -225,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3B13BD1AD9BCDE006E417B /* EditViewController.swift in Sources */,
+				5C6481111ADCB77900C91359 /* EditViewController.swift in Sources */,
 				4E7A27071AD9A837000C4046 /* Contact.swift in Sources */,
 				4E7A26E91AD9A7E0000C4046 /* DetailViewController.swift in Sources */,
 				4E7A26E71AD9A7E0000C4046 /* MasterViewController.swift in Sources */,
@@ -359,8 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactVieweriOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -369,8 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactVieweriOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -387,6 +391,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ContactVieweriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactVieweriOS.app/ContactVieweriOS";
@@ -402,6 +407,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ContactVieweriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactVieweriOS.app/ContactVieweriOS";

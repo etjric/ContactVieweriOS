@@ -10,8 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var twitterLabel: UILabel!
 
     var detailItem: Contact? {
         didSet {
@@ -23,14 +26,22 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: Contact = self.detailItem  {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.name
-                
+            if let nameLabel = self.nameLabel {
+                nameLabel.text = detail.name
+            }
+            if let titleLabel = self.titleLabel {
+                titleLabel.text = detail.title
+            }
+            if let phoneLabel = self.phoneLabel {
+                phoneLabel.text = detail.phone
+            }
+            if let emailLabel = self.emailLabel {
+                emailLabel.text = detail.email
+            }
+            if let twitterLabel = self.twitterLabel {
+                twitterLabel.text = detail.twitterId
             }
         }
-
-        
-
     }
 
     override func viewDidLoad() {
