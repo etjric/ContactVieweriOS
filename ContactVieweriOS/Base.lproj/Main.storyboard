@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -158,7 +158,13 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="dSq-Mi-5oJ">
+                            <connections>
+                                <segue destination="tOt-U6-KgB" kind="show" identifier="editDetail" id="bXw-of-rjX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="qYo-ci-2Hc" id="qjV-WF-SQb"/>
                         <outlet property="nameLabel" destination="ksL-KX-NsP" id="6Q4-EE-FbL"/>
@@ -170,6 +176,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="129"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="hm5-fo-Alb">
+            <objects>
+                <viewController storyboardIdentifier="Edit Detail" id="tOt-U6-KgB" customClass="EditViewController" customModule="ContactVieweriOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xyl-wP-5xU"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Oc-Xt-7k9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46S-EK-g3g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSb-ja-X3S">
+                                <rect key="frame" x="36" y="84" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="jI4-67-Qer"/>
+                                    <constraint firstAttribute="height" constant="30" id="xPw-Ml-3tt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-dd-5oK">
+                                <rect key="frame" x="146" y="84" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5J0-z7-H2T"/>
+                                    <constraint firstAttribute="height" constant="30" id="aea-OJ-PTp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IY-z5-WzS">
+                                <rect key="frame" x="146" y="164" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GZ1-py-opb"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rif-lV-0xq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OSb-ja-X3S" firstAttribute="leading" secondItem="46S-EK-g3g" secondAttribute="leadingMargin" constant="20" id="Dzs-iC-Yyt"/>
+                            <constraint firstItem="6IY-z5-WzS" firstAttribute="leading" secondItem="46S-EK-g3g" secondAttribute="leadingMargin" constant="130" id="P63-ug-r5s"/>
+                            <constraint firstItem="OSb-ja-X3S" firstAttribute="top" secondItem="Xyl-wP-5xU" secondAttribute="bottom" constant="20" id="UpN-Sr-3OW"/>
+                            <constraint firstItem="jsJ-dd-5oK" firstAttribute="top" secondItem="Xyl-wP-5xU" secondAttribute="bottom" constant="20" id="hqi-Ge-jzf"/>
+                            <constraint firstItem="jsJ-dd-5oK" firstAttribute="leading" secondItem="OSb-ja-X3S" secondAttribute="trailing" constant="30" id="nkM-yO-ZB7"/>
+                            <constraint firstItem="6IY-z5-WzS" firstAttribute="top" secondItem="jsJ-dd-5oK" secondAttribute="bottom" constant="50" id="uGo-Pu-lVG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="jsJ-dd-5oK" id="eas-bI-6YZ"/>
+                        <outlet property="nameLabel" destination="6IY-z5-WzS" id="4BG-D2-vxX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igr-jh-nNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="128"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

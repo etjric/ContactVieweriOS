@@ -55,6 +55,15 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editDetail" {
+            let contact = detailItem
+            let controller = (segue.destinationViewController) as EditViewController
+            controller.detailItem = contact
+            //controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            //controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+    }
 
 }
 

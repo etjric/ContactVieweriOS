@@ -9,11 +9,29 @@
 import UIKit
 
 class EditViewController: UIViewController {
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var detailItem: Contact? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
+    
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let detail: Contact = self.detailItem  {
+            if let nameLabel = self.nameLabel {
+                nameLabel.text = detail.name
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {

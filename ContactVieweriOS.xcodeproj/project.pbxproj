@@ -18,7 +18,6 @@
 		4E7A26FD1AD9A7E1000C4046 /* ContactVieweriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26FC1AD9A7E1000C4046 /* ContactVieweriOSTests.swift */; };
 		4E7A27071AD9A837000C4046 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A27061AD9A837000C4046 /* Contact.swift */; };
 		5C6481111ADCB77900C91359 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64810F1ADCB77900C91359 /* EditViewController.swift */; };
-		5C6481121ADCB77900C91359 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6481101ADCB77900C91359 /* EditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		4E7A26FC1AD9A7E1000C4046 /* ContactVieweriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVieweriOSTests.swift; sourceTree = "<group>"; };
 		4E7A27061AD9A837000C4046 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C64810F1ADCB77900C91359 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		5C6481101ADCB77900C91359 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 				4E7A26E81AD9A7E0000C4046 /* DetailViewController.swift */,
 				4E7A26EA1AD9A7E0000C4046 /* Main.storyboard */,
 				5C64810F1ADCB77900C91359 /* EditViewController.swift */,
-				5C6481101ADCB77900C91359 /* EditViewController.xib */,
 				4E7A26ED1AD9A7E1000C4046 /* Images.xcassets */,
 				4E7A26EF1AD9A7E1000C4046 /* LaunchScreen.xib */,
 				4E7A26E21AD9A7E0000C4046 /* Supporting Files */,
@@ -210,7 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6481121ADCB77900C91359 /* EditViewController.xib in Resources */,
 				4E7A26EC1AD9A7E0000C4046 /* Main.storyboard in Resources */,
 				4E7A26F11AD9A7E1000C4046 /* LaunchScreen.xib in Resources */,
 				4E7A26EE1AD9A7E1000C4046 /* Images.xcassets in Resources */,
