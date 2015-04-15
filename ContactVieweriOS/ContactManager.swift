@@ -12,8 +12,6 @@ private let _ourInstance = ContactManager()
 
 class ContactManager: NSObject {
     var _contacts = [String: Contact]()
-    private let _contactFileName = "contacts_storage.json"
-    
     
     //swift singleton pattern per --> http://code.martinrue.com/posts/the-singleton-pattern-in-swift
     class var sharedInstance : ContactManager {

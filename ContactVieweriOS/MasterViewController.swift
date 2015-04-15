@@ -39,19 +39,6 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
-
-        
-        //on xcode 6.2 -- the as! is as here
-
-//        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
-//        
-//        let path = NSBundle.mainBundle().pathForResource("filename", ofType: "fileExt")
-        //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
-
-        let path = NSBundle.mainBundle().pathForResource("defaultData", ofType: "json")
-                     
-        //contacts = jsonResult["contact"]
-    
     
     }
 
@@ -108,11 +95,16 @@ class MasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            var cntToRemove: Contact = contacts[indexPath.row]
             contacts.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            ctxContactManager.deleteContact(cntToRemove)
+            ctxContactManager.saveContacts()
+        
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+        
     }
 
     //override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
