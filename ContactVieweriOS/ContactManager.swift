@@ -14,6 +14,8 @@ class ContactManager: NSObject {
     var _contacts = [String: Contact]()
     private let _contactFileName = "contacts_storage.json"
     
+    
+    //swift singleton pattern per --> http://code.martinrue.com/posts/the-singleton-pattern-in-swift
     class var sharedInstance : ContactManager {
         struct Static {
             static var instance: ContactManager?
@@ -23,11 +25,12 @@ class ContactManager: NSObject {
         dispatch_once(&Static.token) {
             Static.instance = ContactManager()
         }
-        
+
         return Static.instance!
     }
     
     private override init() {
+        //singleton -- so we hide the constructor
     }
 
     
@@ -44,7 +47,6 @@ class ContactManager: NSObject {
     }
     
     func addContact(contact: Contact) {
-        contact.id = NSUUID().UUIDString
         _contacts[contact.id] = contact
     }
     
@@ -60,51 +62,51 @@ class ContactManager: NSObject {
     }
     
     func saveContacts() {
-        //turn _contacts into json
-        //write it to file
+        let documentsPath: String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let filename: String = "contacts.plist"
+        let filePath: String = documentsPath + "/" + filename
+
+        var json: [Dictionary<String, AnyObject>] = []
+        for c in _contacts.values.array {
+            var jsonContact = [
+                "id" : c.id,
+                "name": c.name,
+                "phone": c.phone,
+                "title": c.title,
+                "email": c.email,
+                "twitterId": c.twitterId
+            ]
+            json.append(jsonContact)
+        }
+        NSKeyedArchiver.archiveRootObject(json, toFile: filePath)
     }
     
     func loadContacts() {
-        //load the file
-        //load _contacts from json
-        generateTestData()
-        let file = "contacts.json"
-        
-        if (false) {
-        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
-            let dir = dirs[0] //documents directory
-            let pathT = dir.stringByAppendingPathComponent(file);
-            let text = "some text"
-            
-            let data = NSJSONSerialization.dataWithJSONObject(_contacts, options: nil, error: nil)
-            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            
-            //writing
-            dataString!.writeToFile(pathT, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
-            
-            //reading
-            //            let newDataString = String(contentsOfFile: pathT, encoding: NSUTF8StringEncoding, error: nil)
-            //            contacts =NSJSONSerialization.
-            //            let myText: String? = newDataString
-            //            
-            
-//            if (_contacts.count < 1) {
-//                var jsonError: NSError?
-//                let jsonData: NSData? = NSData.dataWithContentsOfMappedFile(path!) as? NSData
-//                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions.MutableContainers, error:&jsonError) as NSDictionary
-//                // var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as? NSDictionary
-//                //var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &jsonError ) as NSDictionary
-//                
-//                //            if jsonResult {
-//                //                // process jsonResult
-//                //            } else {
-//                //                // couldn't load JSON, look at error
-//                //            }
-//                //            
-//
-        }
-        }
+        let documentsPath: String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let filename: String = "contacts.plist"
+        let filePath: String = documentsPath + "/" + filename
 
+        var checkValidation = NSFileManager.defaultManager()
+        
+        if (checkValidation.fileExistsAtPath(filePath)) {
+            let inJSON:[Dictionary<String, AnyObject>] = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as [Dictionary<String, AnyObject>]
+            
+            for c in inJSON {
+                let name: String = c["name"] as String
+                let id: String = c["id"] as String
+                let title: String = c["title"] as String
+                let phone: String = c["phone"] as String
+                let email: String = c["email"] as String
+                let twitterId: String = c["twitterId"] as String
+                
+                let myContact: Contact = Contact(name: name, phone: phone, title: title, email: email, twitterId: twitterId, id:id)
+                addContact(myContact)
+            }
+        }
+        else{
+            generateTestData()
+        }
+        return
     }
     
     func getAllContacts() -> [Contact] {

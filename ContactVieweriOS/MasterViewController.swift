@@ -24,7 +24,8 @@ class MasterViewController: UITableViewController {
         
         ctxContactManager.loadContacts()
         contacts = ctxContactManager.getAllContacts()
-
+        ctxContactManager.saveContacts()
+        
     }
 
     override func viewDidLoad() {

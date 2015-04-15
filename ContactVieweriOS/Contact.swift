@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Contact: NSObject {
+class Contact {
     
     var id: String
     var name:String
@@ -18,7 +18,7 @@ class Contact: NSObject {
     var twitterId:String
     
     init(name:String, phone:String, title:String, email:String, twitterId:String) {
-        self.id = ""
+        self.id = NSUUID().UUIDString
         self.name = name
         self.phone = phone
         self.title = title
@@ -26,5 +26,8 @@ class Contact: NSObject {
         self.twitterId = twitterId
     }
     
-    
+    convenience init(name:String, phone:String, title:String, email:String, twitterId:String, id:String) {
+        self.init(name: name, phone: phone, title: title, email: email, twitterId: twitterId)
+        self.id  = id
+    }
 }
