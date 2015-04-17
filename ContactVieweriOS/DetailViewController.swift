@@ -16,13 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var twitterLabel: UILabel!
 
-    var detailItem: Contact? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-
+    var detailItem: Contact?
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: Contact = self.detailItem  {
