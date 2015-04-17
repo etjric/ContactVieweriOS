@@ -36,10 +36,9 @@ class EditViewController: UIViewController {
             if let twitterField = self.twitterField {
                 twitterField.text = detail.twitterId
             }
-
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
@@ -49,7 +48,17 @@ class EditViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-
+    @IBAction func saveContact(sender: AnyObject) {
+        if let detail: Contact = self.detailItem  {
+            detail.name = nameField.text
+            detail.phone = phoneField.text
+            detail.title = titleField.text
+            detail.email = emailField.text
+            detail.twitterId = twitterField.text
+            
+            ContactManager.sharedInstance.saveContacts()
+            
+        }
+    }
 }

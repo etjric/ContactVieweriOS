@@ -310,7 +310,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Contact" id="qSb-FL-q4j">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cRf-SG-0Sh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cRf-SG-0Sh">
+                            <connections>
+                                <action selector="saveContact:" destination="tOt-U6-KgB" id="EMe-fs-B60"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="N3l-H9-DJZ" id="wnD-RY-d3M"/>

@@ -39,15 +39,17 @@ class DetailViewController: UIViewController {
         }
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+        self.configureView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -55,10 +57,10 @@ class DetailViewController: UIViewController {
             let contact = detailItem
             let controller = (segue.destinationViewController) as EditViewController
             controller.detailItem = contact
-            //controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-            //controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
+    
+    
 
 }
 
