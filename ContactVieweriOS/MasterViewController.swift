@@ -34,6 +34,8 @@ class MasterViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        ctxContactManager.loadContacts()
+        contacts = ctxContactManager.getAllContacts()
         self.tableView.reloadData()
     }
 
