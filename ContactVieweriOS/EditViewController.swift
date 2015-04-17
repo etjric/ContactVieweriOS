@@ -58,7 +58,7 @@ class EditViewController: UIViewController {
             detail.twitterId = twitterField.text
             
             ContactManager.sharedInstance.saveContacts()
-            
+            navigationController?.popViewControllerAnimated(true)
         }
     }
 }
