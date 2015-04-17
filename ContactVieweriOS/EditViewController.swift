@@ -43,7 +43,7 @@ class EditViewController: UIViewController {
         }
         //we don't so we go into Add mode
         else{
-            //nothing to set I think...
+            self.title = "Add Contact"
         
         }
     }

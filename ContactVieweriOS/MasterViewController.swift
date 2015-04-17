@@ -21,7 +21,7 @@ class MasterViewController: UITableViewController {
             self.clearsSelectionOnViewWillAppear = false
             self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
         }
-        
+        self.title = "ContactsApp for iOS"
         ctxContactManager.loadContacts()
         contacts = ctxContactManager.getAllContacts()
         ctxContactManager.saveContacts()
