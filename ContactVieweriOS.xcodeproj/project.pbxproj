@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E4F65901ADE0F34004B52B1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F658F1ADE0F34004B52B1 /* AddViewController.swift */; };
 		4E76A0BF1ADCB85400C5C974 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */; };
 		4E7A26E51AD9A7E0000C4046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E41AD9A7E0000C4046 /* AppDelegate.swift */; };
 		4E7A26E71AD9A7E0000C4046 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7A26E61AD9A7E0000C4046 /* MasterViewController.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E4F658F1ADE0F34004B52B1 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		4E7A26DF1AD9A7E0000C4046 /* ContactVieweriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactVieweriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E7A26E31AD9A7E0000C4046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				4E7A26E21AD9A7E0000C4046 /* Supporting Files */,
 				4E7A27061AD9A837000C4046 /* Contact.swift */,
 				4E76A0BE1ADCB85400C5C974 /* ContactManager.swift */,
-				4E4F658F1ADE0F34004B52B1 /* AddViewController.swift */,
 			);
 			path = ContactVieweriOS;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 			files = (
 				5C6481111ADCB77900C91359 /* EditViewController.swift in Sources */,
 				4E7A27071AD9A837000C4046 /* Contact.swift in Sources */,
-				4E4F65901ADE0F34004B52B1 /* AddViewController.swift in Sources */,
 				4E7A26E91AD9A7E0000C4046 /* DetailViewController.swift in Sources */,
 				4E7A26E71AD9A7E0000C4046 /* MasterViewController.swift in Sources */,
 				4E76A0BF1ADCB85400C5C974 /* ContactManager.swift in Sources */,
