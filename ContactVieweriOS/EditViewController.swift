@@ -10,22 +10,33 @@ import UIKit
 
 class EditViewController: UIViewController {
     
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var twitterField: UITextField!
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
     
-    var detailItem: Contact? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
+    var detailItem: Contact?
     
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: Contact = self.detailItem  {
-            if let nameLabel = self.nameLabel {
-                nameLabel.text = detail.name
+            if let nameField = self.nameField {
+                nameField.text = detail.name
             }
+            if let titleField = self.titleField {
+                titleField.text = detail.title
+            }
+            if let phoneField = self.phoneField {
+                phoneField.text = detail.phone
+            }
+            if let emailField = self.emailField {
+                emailField.text = detail.email
+            }
+            if let twitterField = self.twitterField {
+                twitterField.text = detail.twitterId
+            }
+
         }
     }
 
